@@ -1,0 +1,11 @@
+getline(cin , str);
+age adult or not program
+grade program (if - else)
+switch
+array 
+2d array
+string
+
+
+
+array always pass by reference
