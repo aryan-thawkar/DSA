@@ -79,6 +79,11 @@ void pattern8(int n ){
     }
 }
 
+void pattern9(int n){
+    pattern7(n);
+    pattern8(n);
+}
+
 
 
 int main(){
@@ -88,7 +93,7 @@ int main(){
     cin>> n;
 
 
-    pattern8(n);
+    pattern9(n);
 
    return 0;
 }
