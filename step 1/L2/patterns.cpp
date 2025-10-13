@@ -84,7 +84,51 @@ void pattern9(int n){
     pattern8(n);
 }
 
+void pattern10(int n){
+    for(int i = 1 ; i <= 2*n-1 ; i++){
+        int stars = i;
+        if(i > n ) stars = 2*n-i;
 
+        for(int j = 1 ; j <= stars ; j++){
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+
+void pattern11(int n ){
+    int start = 1;
+    for(int i = 1 ; i<= n ; i++){
+        if(i%2 == 0) start = 1;
+        else start = 0;
+        for (int j=1 ; j<= i ; j++){
+            cout<<start<<" ";
+            start = 1 - start;
+        }
+        cout<<endl;
+    }
+}
+
+
+void pattern12(int n){
+    for(int i = 1 ; i<= n ; i++){
+        // number
+        for(int j = 1 ; j <= i ; j++){
+            cout<<j<<" ";
+        }
+
+        // space
+        for(int k = 1; k <= (2*n)-(i*2) ; k++){
+            cout<<"  ";
+        }
+
+        // number
+        for(int j = i ; j >= 1 ; j--){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+}
 
 int main(){
 
@@ -93,7 +137,7 @@ int main(){
     cin>> n;
 
 
-    pattern9(n);
+    pattern12(n);
 
    return 0;
 }
