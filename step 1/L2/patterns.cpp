@@ -78,12 +78,10 @@ void pattern8(int n ){
         cout<<endl;
     }
 }
-
 void pattern9(int n){
     pattern7(n);
     pattern8(n);
 }
-
 void pattern10(int n){
     for(int i = 1 ; i <= 2*n-1 ; i++){
         int stars = i;
@@ -95,7 +93,6 @@ void pattern10(int n){
         cout<<endl;
     }
 }
-
 void pattern11(int n ){
     int start = 1;
     for(int i = 1 ; i<= n ; i++){
@@ -108,8 +105,6 @@ void pattern11(int n ){
         cout<<endl;
     }
 }
-
-
 void pattern12(int n){
     for(int i = 1 ; i<= n ; i++){
         // number
@@ -129,7 +124,6 @@ void pattern12(int n){
         cout<<endl;
     }
 }
-
 void pattern13(int n){
     int num = 1;
     for(int i = 1 ; i<= n ; i++){
@@ -141,10 +135,48 @@ void pattern13(int n){
 
     }
 }
-
 void pattern14(int n){
-    
+    for(int i = 0 ; i<n ; i++){
+        for(char ch ='A'; ch <= 'A' + i ; ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
 }
+void pattern15(int n){
+    for(int i = n ; i>0 ; i--){
+        for(char ch ='A'; ch <= 'A' + i-1 ; ch++){
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+}
+void pattern16(int n){
+    char ch = 'A';
+    for(int i = 0 ; i<n ; i++){
+        for(int j = 0 ; j<=i ; j++){
+            cout<<ch<<" ";
+        }
+        ch++;
+        cout<<endl;
+    }
+}
+void pattern17(int n ){
+    for(int i = 0; i<n ; i++){
+        for(int j = 0 ; j < n-i-1 ; j++){
+            cout<<" ";
+        }
+        for(int k = 0; k < i*2+1 ; k++ ){
+            cout<<"*";
+        }
+        for(int j = 0 ; j < n-i-1 ; j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
 int main(){
 
     int n ;
@@ -152,7 +184,7 @@ int main(){
     cin>> n;
 
 
-    pattern13(n);
+    pattern17(n);
 
    return 0;
 }
