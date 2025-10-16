@@ -180,6 +180,21 @@ void pattern17(int n ){
         cout<<endl;
     }
 }
+void pattern18(int n){
+    for(int i = 0 ; i < n ; i++){
+        char ch = 'E'-i;
+        for(int j = 0 ; j<= i ; j++){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl;
+
+
+    }
+}
+void pattern19(int n){
+    
+}
 
 
 int main(){
@@ -189,7 +204,7 @@ int main(){
     cin>> n;
 
 
-    pattern17(n);
+    pattern19(n);
 
    return 0;
 }
