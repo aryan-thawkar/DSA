@@ -80,13 +80,24 @@ void demoDeque(){
     cout<<endl;
 }
 
+void demoStack(){
+    stack<int> s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+
+    cout<<"Top element: "<<s.top()<<endl;
+    s.pop();
+    cout<<"Top element after pop: "<<s.top()<<endl;
+}
+
 int main(){
     cout<<"hello world"<<endl;
     demoPairs();
     demoVectors();
     demoList();
     demoDeque();
-
+    demoStack();
 
     return 0;
 
