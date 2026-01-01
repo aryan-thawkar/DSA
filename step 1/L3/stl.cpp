@@ -11,10 +11,37 @@ void demoPairs(){
     cout<<arr[1].second<<endl;
 }
 
+void demoVectors(){
+    vector<int> v(5,100);
+    v.push_back(1);
+    v.emplace_back(2);
+    cout<<v[0]<<endl;
+    vector<int> :: iterator it = v.begin();
+    cout<<*(it)<<endl;
+    it++;
+    cout<<*(it)<<endl;
+    
+    for(vector<int> :: iterator it = v.begin() ; it != v.end() ; it++){
+        cout<<*(it)<<" ";
+    }
+    cout<<endl;
+    v.erase(v.begin()+1);
+
+    for(auto it = v.begin() ; it != v.end() ; it++){
+        cout<<*(it)<<" ";
+    }
+    cout<<endl;
+
+    for(auto value : v){
+        cout<<value<<" ";
+    }
+    cout<<endl;
+}
+
 int main(){
     cout<<"hello world"<<endl;
-    demoPairs();
-
+    // demoPairs();
+    demoVectors();
 
 
     return 0;
