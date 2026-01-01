@@ -38,10 +38,32 @@ void demoVectors(){
     cout<<endl;
 }
 
+void demoList(){
+    list<int> l;
+    l.push_back(1);
+    l.emplace_back(2);
+    l.push_front(3);
+    l.emplace_front(4);
+
+    for(auto it = l.begin() ; it != l.end() ; it++){
+        cout<<*(it)<<" ";
+    }
+    cout<<endl;
+
+    l.erase(l.begin());
+    l.remove(2);
+
+    for(auto value : l){
+        cout<<value<<" ";
+    }
+    cout<<endl;
+}
+
 int main(){
     cout<<"hello world"<<endl;
     // demoPairs();
-    demoVectors();
+    // demoVectors();/
+    demoList();
 
 
     return 0;
