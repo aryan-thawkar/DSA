@@ -59,11 +59,33 @@ void demoList(){
     cout<<endl;
 }
 
+void demoDeque(){
+    deque<int> d;
+    d.push_back(1);
+    d.emplace_back(2);
+    d.push_front(3);
+    d.emplace_front(4);
+
+    for(auto it = d.begin() ; it != d.end() ; it++){
+        cout<<*(it)<<" ";
+    }
+    cout<<endl;
+
+    d.pop_back();
+    d.pop_front();
+
+    for(auto value : d){
+        cout<<value<<" ";
+    }
+    cout<<endl;
+}
+
 int main(){
     cout<<"hello world"<<endl;
-    // demoPairs();
-    // demoVectors();/
+    demoPairs();
+    demoVectors();
     demoList();
+    demoDeque();
 
 
     return 0;
