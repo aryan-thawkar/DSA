@@ -91,6 +91,17 @@ void demoStack(){
     cout<<"Top element after pop: "<<s.top()<<endl;
 }
 
+void demoQueue(){
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+
+    cout<<"Front element: "<<q.front()<<endl;
+    q.pop();
+    cout<<"Front element after pop: "<<q.front()<<endl;
+}
+
 int main(){
     cout<<"hello world"<<endl;
     demoPairs();
@@ -98,6 +109,7 @@ int main(){
     demoList();
     demoDeque();
     demoStack();
+    demoQueue();
 
     return 0;
 
