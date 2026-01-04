@@ -26,10 +26,10 @@ int reverse(int x) {
         }
         
         return rev;
-    }
+}
 
 
-    bool isPalindrome(int x) {
+bool isPalindrome(int x) {
         int n = x;
         int rev = 0;
         int rem = 0;
@@ -46,12 +46,25 @@ int reverse(int x) {
         }else {
             return false;
         }
+}
+
+bool isArmstrong(int x) {
+    int n = x;
+    int rem = 0;
+    int sum = 0;
+    while (n != 0 ){
+        rem = n % 10;
+        sum = sum + (rem * rem * rem );
+        n = n / 10;
     }
+    return (x == sum ) ?  true :  false;
+}
 
 int main(){
 
     cout<<countDigits(123456789)<<endl;
     cout<<reverse(1534469)<<endl;
     cout<<isPalindrome(0)<<endl;
+    cout<<isArmstrong(153)<<endl;
     return 0;
 }
