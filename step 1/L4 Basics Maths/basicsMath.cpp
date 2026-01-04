@@ -60,11 +60,36 @@ bool isArmstrong(int x) {
     return (x == sum ) ?  true :  false;
 }
 
+void printAllDivisor(int x){
+    for (int i = 1 ; i <= x ; i++){
+        if (x % i == 0){
+            cout<<i<<" ";
+        }
+    }
+}
+
+void printAllDivisorOptimized(int x){
+    vector<int> ls;
+    for(int i = 1 ; (i*i) <= x ; i++){
+        if (x % i == 0){
+            ls.push_back(i);
+            if((x/i) != i){
+                ls.push_back(x/i);
+            }
+        }
+    }
+    sort(ls.begin(), ls.end());
+    for(auto it : ls) cout << it << " ";
+}
+
 int main(){
 
     cout<<countDigits(123456789)<<endl;
     cout<<reverse(1534469)<<endl;
     cout<<isPalindrome(0)<<endl;
     cout<<isArmstrong(153)<<endl;
+    printAllDivisor(999);
+    cout<<endl;
+    printAllDivisorOptimized(999);
     return 0;
 }
