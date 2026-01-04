@@ -10,27 +10,48 @@ int countDigits(int n){
     return digits;
 }
 
-int revNumber(int x){
-    int rem = 0 ;
-        long int rev = 0;
-        bool isNegative = x < 0;
-        if(isNegative){
-            x = x * (-1);
-        }
-        while(x > 0){
+int reverse(int x) {
+        int rem = 0;
+        int rev = 0;  
+        while (x != 0) {
             rem = x % 10;
-            rev = (rev * 10) + rem;
+
+           
+            if ((rev > INT_MAX / 10) || (rev < INT_MIN / 10)) {
+                return 0;
+            }
+
+            rev = rev * 10 + rem;
             x = x / 10;
         }
-        if(isNegative){
-            rev = -rev;
-        }
+        
         return rev;
-}
+    }
+
+
+    bool isPalindrome(int x) {
+        int n = x;
+        int rev = 0;
+        int rem = 0;
+        while ( n > 0 ){
+            rem = n % 10;
+            if ((rev > INT_MAX / 10) || (rev < INT_MIN /10)){
+                return 0;
+            }
+            rev = (rev * 10) + rem;
+            n = n / 10;
+        }
+        if(rev == x){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 int main(){
 
     cout<<countDigits(123456789)<<endl;
-    cout<<revNumber(1534236469)<<endl;
+    cout<<reverse(1534469)<<endl;
+    cout<<isPalindrome(0)<<endl;
     return 0;
 }
