@@ -91,6 +91,13 @@ bool isPrime(int x ){
     return true;
 }
 
+int gcd(int x, int y){
+    while(x > 0 && y > 0){
+        (x > y ) ? x = x % y : y = y % x ;
+    }
+    return (x == 0) ? y : x ;
+}
+
 int main(){
 
     cout<<countDigits(123456789)<<endl;
@@ -102,5 +109,7 @@ int main(){
     printAllDivisorOptimized(999);
     cout<<endl;
     cout<<isPrime(18);
+    cout<<endl;
+    cout<<gcd(100 , 21);
     return 0;
 }
