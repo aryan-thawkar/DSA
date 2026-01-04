@@ -82,6 +82,15 @@ void printAllDivisorOptimized(int x){
     for(auto it : ls) cout << it << " ";
 }
 
+bool isPrime(int x ){
+    for (int i = 2 ; (i*i) <= x ; i++ ){
+        if (x % i == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
 int main(){
 
     cout<<countDigits(123456789)<<endl;
@@ -91,5 +100,7 @@ int main(){
     printAllDivisor(999);
     cout<<endl;
     printAllDivisorOptimized(999);
+    cout<<endl;
+    cout<<isPrime(18);
     return 0;
 }
